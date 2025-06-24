@@ -9,6 +9,7 @@ export const Container = styled.div<{ $isLogged: boolean; $isMobile: boolean }>`
   background-color: var(--color-brand-1);
   width: 100%;
   box-shadow: var(--box-shadow-2);
+  z-index: 99;
 
   @media (min-width: 768px) {
     justify-content: space-between;

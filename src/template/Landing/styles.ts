@@ -1,13 +1,37 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 0px 20px 0 20px;
-  background-color: var(--color-brand-2);
+  padding: 0px 20px;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+
+  // Imagem de fundo com filtro frio e desfoque
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/images/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    z-index: -20;
+  }
+
+  // Camada escura sobre o fundo
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); // controla o quanto escurece
+    z-index: -1;
+  }
 
   @media (min-width: 768px) {
     flex-direction: row-reverse;
@@ -44,7 +68,7 @@ export const Text = styled.p`
   font-family: var(--lexend);
   font-size: var(--font-size-18);
   font-weight: 500;
-  color: var(--color-profile-2);
+  color: var(--grey-10);
   line-height: 1.6;
   margin: 0;
 
@@ -82,7 +106,7 @@ export const TypeWritter = styled.div`
     font-size: var(--font-size-24);
     font-family: var(--lexend-exa);
     font-weight: bold;
-    color: var(--color-profile-2);
+    color: var(--grey-10);
     line-height: 1.6;
     margin: 0;
     text-align: center;
