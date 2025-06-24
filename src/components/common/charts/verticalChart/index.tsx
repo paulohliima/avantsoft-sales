@@ -54,7 +54,7 @@ const CustomVerticalChart = ({ clients }: ChartProps) => {
         }}
         yAxis={[{ label: 'Valor (R$)', width: 50 }]}
         height={300}
-        width={320}
+        width={300}
       />
     </S.Container>
   );

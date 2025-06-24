@@ -64,6 +64,18 @@ export const clientsData: IClientResponse = {
           ],
         },
       },
+      {
+        info: {
+          nomeCompleto: 'Eduardo Silva',
+          detalhes: {
+            email: 'eduardo.silva@example.com',
+            nascimento: '1990-11-10',
+          },
+        },
+        estatisticas: {
+          vendas: [{ data: '2025-06-23', valor: 200 }],
+        },
+      },
     ],
   },
   meta: {

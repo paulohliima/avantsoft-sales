@@ -3,34 +3,84 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 9px;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: start;
+  }
+`;
+
+export const ContainerTitle = styled.div`
+  height: 40px;
+  display: flex;
+  background-color: var(--color-profile-2);
+  border-radius: 12px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 1024px) {
+    border-radius: 6px;
+    height: 56px;
+  }
 `;
 
 export const Card = styled.div`
+  display: flex;
+  width: 340px;
+  height: 100px;
+  align-items: center;
   background: #fff;
-  padding: 16px 24px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-  min-width: 330px;
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-1);
+  position: relative;
+
+  @media (min-width: 768px) {
+    width: 320px;
+  }
 `;
 
 export const CardTitle = styled.h3`
-  margin-bottom: 12px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: var(--lexend);
 `;
 
 export const Name = styled.h4`
-  margin: 8px 0;
   font-weight: 700;
   font-size: 16px;
-  color: #0070f3;
+  color: #b71717;
+  align-self: center;
+  text-transform: uppercase;
 `;
 
 export const Info = styled.p`
-  margin: 4px 0;
   font-size: 14px;
-  color: #333;
+  color: var(--sucess-1);
+  font-weight: bold;
+`;
+
+export const ContainerCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+`;
+
+export const BadgeImgLeft = styled.img`
+  width: 60px;
+  position: absolute;
+  height: 60px;
+  top: 10;
+  left: 10px;
+`;
+
+export const BadgeImgRight = styled.img`
+  width: 60px;
+  position: absolute;
+  height: 60px;
+  top: 10;
+  right: 10px;
 `;

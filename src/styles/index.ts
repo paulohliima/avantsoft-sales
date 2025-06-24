@@ -58,7 +58,7 @@ export const RootVariables = createGlobalStyle`
     :root{
         //THEME COLORS
         --color-brand-1: #F3F5FF;
-        --color-brand-2: #EEEEEE;
+        --color-brand-2: #e6ecf0;
 
         //GENERAL COLORS
         --color-white: #FFFFFF;

@@ -9,7 +9,7 @@ export const S = {
     align-self: center;
     align-items: center;
     padding: 24px;
-    background: var(--grey-10);
+    background: var(--color-brand-1);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
   `,

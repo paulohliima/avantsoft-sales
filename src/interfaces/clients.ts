@@ -2,6 +2,7 @@ export interface IClientRequest {
   nomeCompleto: string;
   email: string;
   nascimento: string;
+  vendasAleatorias?: boolean;
 }
 
 export interface IClientResponse {

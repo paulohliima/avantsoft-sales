@@ -14,7 +14,7 @@ const chartSetting = {
     },
   ],
   height: 300,
-  width: 320,
+  width: 300,
   yAxis: [
     {
       dataKey: 'client',

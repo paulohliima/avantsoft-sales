@@ -6,9 +6,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   box-shadow: var(--box-shadow-1);
-  min-width: 300px;
-  max-width: 350px;
-  padding: 20px;
+  width: 340px;
+  padding: 20px 10px;
   border-radius: 12px;
   background-color: var(--grey-10);
 `;

@@ -1,5 +1,6 @@
 import * as S from './styles';
 import React, { useMemo, useRef } from 'react';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 interface NormalizedClient {
   fullName: string;
@@ -66,47 +67,64 @@ const Ranking: React.FC<RankingProps> = ({ clients }) => {
 
   return (
     <S.Container>
+      <S.ContainerTitle>
+        <EmojiEventsIcon style={{ color: '#fcba0a' }} />
+        <S.CardTitle style={{ color: '#fff' }}>Ranking</S.CardTitle>
+        <EmojiEventsIcon style={{ color: '#fcba0a' }} />
+      </S.ContainerTitle>
       <S.Card>
-        <S.CardTitle>Maior Volume de Vendas</S.CardTitle>
-        {topVolume ? (
-          <>
-            <S.Name>{topVolume.fullName}</S.Name>
-            <S.Info>Vendas: {topVolume.sales.length}</S.Info>
-          </>
-        ) : (
-          <S.Info>Sem dados</S.Info>
-        )}
+        <S.BadgeImgLeft src={'assets/images/crownBadge.png'} />
+        <S.ContainerCard>
+          <S.CardTitle>Maior Volume de Vendas</S.CardTitle>
+          {topVolume ? (
+            <>
+              <S.Name>{topVolume.fullName}</S.Name>
+              <S.Info>Vendas: {topVolume.sales.length}</S.Info>
+            </>
+          ) : (
+            <S.Info>Sem dados</S.Info>
+          )}
+        </S.ContainerCard>
+        <S.BadgeImgRight src={'assets/images/crownBadge.png'} />
       </S.Card>
 
       <S.Card>
-        <S.CardTitle>Maior Média por Venda</S.CardTitle>
-        {topAverage ? (
-          <>
-            <S.Name>{topAverage.fullName}</S.Name>
-            <S.Info>
-              Média:{' '}
-              {formatCurrency(
-                topAverage.sales.length > 0
-                  ? topAverage.sales.reduce((acc, s) => acc + s.amount, 0) / topAverage.sales.length
-                  : 0
-              )}
-            </S.Info>
-          </>
-        ) : (
-          <S.Info>Sem dados</S.Info>
-        )}
+        <S.BadgeImgLeft src={'assets/images/crownBadge.png'} />
+        <S.ContainerCard>
+          <S.CardTitle>Maior Média por Venda</S.CardTitle>
+          {topAverage ? (
+            <>
+              <S.Name>{topAverage.fullName}</S.Name>
+              <S.Info>
+                Média:{' '}
+                {formatCurrency(
+                  topAverage.sales.length > 0
+                    ? topAverage.sales.reduce((acc, s) => acc + s.amount, 0) / topAverage.sales.length
+                    : 0
+                )}
+              </S.Info>
+            </>
+          ) : (
+            <S.Info>Sem dados</S.Info>
+          )}
+        </S.ContainerCard>
+        <S.BadgeImgRight src={'assets/images/crownBadge.png'} />
       </S.Card>
 
       <S.Card>
-        <S.CardTitle>Maior Frequência de Vendas</S.CardTitle>
-        {topFrequency ? (
-          <>
-            <S.Name>{topFrequency.fullName}</S.Name>
-            <S.Info>Vendas: {topFrequency.sales.length}</S.Info>
-          </>
-        ) : (
-          <S.Info>Sem dados</S.Info>
-        )}
+        <S.BadgeImgLeft src={'assets/images/crownBadge.png'} />
+        <S.ContainerCard>
+          <S.CardTitle>Maior Frequência de Vendas</S.CardTitle>
+          {topFrequency ? (
+            <>
+              <S.Name>{topFrequency.fullName}</S.Name>
+              <S.Info>Vendas: {topFrequency.sales.length}</S.Info>
+            </>
+          ) : (
+            <S.Info>Sem dados</S.Info>
+          )}
+        </S.ContainerCard>
+        <S.BadgeImgRight src={'assets/images/crownBadge.png'} />
       </S.Card>
     </S.Container>
   );

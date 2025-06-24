@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import AddIcon from '@mui/icons-material/Add';
 
 export interface IButtonProps {
   label?: string;
@@ -11,7 +12,7 @@ export interface IButtonProps {
   variant?: 'text' | 'outlined' | 'contained' | 'stylized';
   color?: 'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning' | string;
   size?: 'small' | 'medium' | 'large';
-  iconType?: 'visibility' | 'edit' | 'delete' | 'none';
+  iconType?: 'visibility' | 'edit' | 'delete' | 'new' | 'none';
   padding?: string;
   type?: 'button' | 'submit' | 'reset' | undefined;
   sxStyle?: object;
@@ -47,6 +48,9 @@ const CustomButton: React.FC<IButtonProps> = ({
     case 'delete':
       icon = <DeleteIcon style={iconStyle} />;
       break;
+    case 'new':
+      icon = <AddIcon style={iconStyle} />;
+      break;
     default:
       icon = undefined;
   }
@@ -80,7 +84,7 @@ const CustomButton: React.FC<IButtonProps> = ({
           }}
           type={type}
         >
-          {label || icon}
+          {icon} {label}
         </Button>
       ) : variant === 'stylized' ? (
         <S.Container onClick={onClick} style={sxStyle}>

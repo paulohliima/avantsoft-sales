@@ -18,3 +18,16 @@ export const Select = styled.select`
 export const ChartWrapper = styled.div`
   min-height: 300px;
 `;
+
+export const Row = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const ContainerRanking = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;

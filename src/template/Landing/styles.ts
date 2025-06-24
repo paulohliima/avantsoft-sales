@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
   padding: 0px 20px 0 20px;
-  background-color: var(--color-brand-1);
+  background-color: var(--color-brand-2);
   align-items: center;
   justify-content: center;
 
@@ -30,6 +30,12 @@ export const Column = styled.div`
   gap: 20px;
 `;
 
+export const ColumnDesktop = styled.div`
+  display: flex;
+  background-color: var(--grey-10);
+  height: 100%;
+`;
+
 export const Row = styled.div`
   display: flex;
 `;
@@ -48,8 +54,8 @@ export const Text = styled.p`
   @media (min-width: 768px) {
     font-size: var(--font-size-20);
   }
-  @media (min-width: 1300px) {
-    font-size: var(--font-size-24);
+  @media (min-width: 1024px) {
+    font-size: var(--font-size-28);
   }
 `;
 
@@ -87,8 +93,8 @@ export const TypeWritter = styled.div`
     @media (min-width: 768px) {
       font-size: var(--font-size-20);
     }
-    @media (min-width: 1300px) {
-      font-size: var(--font-size-28);
+    @media (min-width: 1024px) {
+      font-size: var(--font-size-32);
     }
   }
 `;

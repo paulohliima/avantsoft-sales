@@ -8,13 +8,11 @@ export const Container = styled.div<{ $isLogged: boolean; $isMobile: boolean }>`
   position: absolute;
   background-color: var(--color-brand-1);
   width: 100%;
-  box-shadow: ${(props) =>
-    (props.$isLogged && !props.$isMobile) || !props.$isMobile ? 'var(--box-shadow-2)' : 'none'};
+  box-shadow: var(--box-shadow-2);
 
   @media (min-width: 768px) {
     justify-content: space-between;
     padding: 0 80px;
-    box-shadow: var(--box-shadow-2);
   }
 `;
 
