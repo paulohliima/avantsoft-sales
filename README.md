@@ -34,7 +34,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 ## 🔗 Link da aplicação em produção
 
-**[Aplicação em Vercel](https://malga-checkout.vercel.app/)**
+**[Aplicação em Vercel](https://avantsoft-sales.vercel.app/)**
 
 ---
 
