@@ -56,13 +56,25 @@ const FormLogin = () => {
 
       <S.FieldWrapper>
         <S.Label htmlFor="email">Email:</S.Label>
-        <S.Input id="email" type="email" {...register('email')} disabled={isSubmitting} />
+        <S.Input
+          id="email"
+          type="email"
+          {...register('email')}
+          disabled={isSubmitting}
+          placeholder="ex: admin@example.com"
+        />
         <S.ErrorMessage>{errors.email?.message || ' '}</S.ErrorMessage>
       </S.FieldWrapper>
 
       <S.FieldWrapper>
         <S.Label htmlFor="password">Senha:</S.Label>
-        <S.Input id="password" type="password" {...register('password')} disabled={isSubmitting} />
+        <S.Input
+          id="password"
+          type="password"
+          {...register('password')}
+          disabled={isSubmitting}
+          placeholder="ex: 123456"
+        />
         <S.ErrorMessage>{errors.password?.message || ' '}</S.ErrorMessage>
       </S.FieldWrapper>
 

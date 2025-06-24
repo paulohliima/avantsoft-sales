@@ -33,7 +33,7 @@ export const Card = styled.div`
   align-items: center;
   background: #fff;
   border-radius: 12px;
-  box-shadow: var(--box-shadow-1);
+  box-shadow: var(--box-shadow-2);
   position: relative;
 
   @media (min-width: 768px) {
