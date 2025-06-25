@@ -30,6 +30,8 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 ### 5. aplicação estará disponível em -> http://localhost:3000
 
+### 6. Conta autenticada para acesso ao dashboard -> email: admin@example.com - senha: 123456
+
 ---
 
 ## 🔗 Link da aplicação em produção
