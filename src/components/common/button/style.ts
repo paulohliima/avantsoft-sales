@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.button`
   display: inline-block;
@@ -8,18 +8,18 @@ export const Container = styled.button`
   font-size: var(--font-size-16);
   line-height: 1.75;
   cursor: pointer;
-  color: var(--color-profile-1);
+  color: var(--grey-10);
   position: relative;
   overflow: hidden;
   z-index: 1;
   background-color: transparent;
   transition: all 0.2s ease-in;
-  border: 1px solid var(--color-profile-1);
+  border: 1px solid var(--grey-10);
   max-width: max-content;
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     border-radius: 50%;
     display: block;
